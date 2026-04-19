@@ -1,0 +1,46 @@
+<article class="eco-status-card @(MetaAtingida ? "meta-atingida" : string.Empty)">
+    <h3>@Titulo</h3>
+
+    <p>Pontos por acao: <strong>@PesoAcao</strong></p>
+    <p>Total acumulado: <strong>@TotalAcumulado</strong></p>
+
+    <button class="btn btn-outline-success" @onclick="RegistrarAtividade">Registrar Atividade</button>
+
+    <div class="progress mt-3" role="progressbar" aria-label="Progresso para meta">
+        <div class="progress-bar" style="width: @($"{ProgressoPercentual}%")">@ProgressoPercentual%</div>
+    </div>
+
+    @if (MetaAtingida)
+    {
+        <p class="mt-2 mb-0 fw-bold text-success">Meta batida! Voce e um Heroi do Planeta!</p>
+    }
+</article>
+
+@code {
+    [Parameter] public string Titulo { get; set; } = "Acao Sustentavel";
+    [Parameter] public int PesoAcao { get; set; }
+    [Parameter] public int Meta { get; set; } = 50;
+
+    private int TotalAcumulado { get; set; }
+
+    private bool MetaAtingida => TotalAcumulado >= Meta;
+
+    private int ProgressoPercentual
+    {
+        get
+        {
+            if (Meta <= 0)
+            {
+                return 100;
+            }
+
+            var percentual = (double)TotalAcumulado / Meta * 100;
+            return Math.Min(100, (int)percentual);
+        }
+    }
+
+    private void RegistrarAtividade()
+    {
+        TotalAcumulado += PesoAcao;
+    }
+}
