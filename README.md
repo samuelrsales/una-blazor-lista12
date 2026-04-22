@@ -6,13 +6,13 @@
 
 ## 👤 Identificação
 
-| Campo         | Informação                            |
-| ------------- | ------------------------------------- |
-| Nome completo | Samuel Rodrigues Sales                |
-| Curso         | Análise e Desenvolvimento de Sistemas |
-| Disciplina    | Interação Humano Computador e UX      |
-| Professor     | Daniel Henrique Matos de Paiva        |
-| Instituição   | Centro Universitário UNA              |
+| Campo        | Informação |
+|-------------|------------|
+| Integrantes | Samuel Rodrigues Sales<br>Guilherme Ernani Oliveira Alonso<br>Gabriella Letícia Oliveira das Chagas<br>Ludmilla dos Santos S. Francisco<br>Isabela da Silva Freitas |
+| Curso       | Análise e Desenvolvimento de Sistemas |
+| Disciplina  | Interação Humano Computador e UX |
+| Professor   | Daniel Henrique Matos de Paiva |
+| Instituição | Centro Universitário UNA |
 
 ## 📌 Sobre o Projeto
 
